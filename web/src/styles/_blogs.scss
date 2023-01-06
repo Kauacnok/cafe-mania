@@ -4,6 +4,10 @@
 	align-items: center;
 	flex-direction: column;
 
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
+
 	.content-blogs {
 		display: flex;
 		justify-content: center;
@@ -33,6 +37,12 @@
 
 			p {
 				margin-bottom: 20px;
+				@media screen and (min-width: 768px) {
+					font-size: 0.8rem;
+				}
+				@media screen and (min-width: 1200px) {
+					font-size: 1rem;
+				}
 			}
 
 			.button-visit {

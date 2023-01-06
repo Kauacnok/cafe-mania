@@ -1,0 +1,21 @@
+.NavigationMenuList {
+	display: none;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.NavigationMenuTrigger {
+	background-color: transparent;
+	border: none;
+	margin-right: 20px;
+	font-size: 1.4rem;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+li {
+	list-style-type: none;
+}

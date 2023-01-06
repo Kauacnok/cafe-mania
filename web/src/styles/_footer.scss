@@ -12,6 +12,11 @@ footer {
 		display: flex;
 		flex-direction: column;
 
+		@media screen and (min-width: 768px) {
+			justify-content: space-around;
+			flex-direction: row;			
+		}
+
 		.footer-content {
 			display: flex;
 			flex-direction: column;
@@ -22,12 +27,21 @@ footer {
 				padding-left: 40px;
 				margin-top: 25px;
 				margin-bottom: 25px;
+
+				@media screen and (min-width: 768px) {
+				
+				}
 			}
 			p {
 				color: $white-100;
 				margin-bottom: 5px;
 				text-align: left;
 				padding-left: 40px;
+
+				@media screen and (min-width: 768px) {
+					text-align: center;
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}

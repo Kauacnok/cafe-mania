@@ -41,13 +41,32 @@ main {
 		align-items: center;
 		flex-direction: column;
 		position: relative;
+		
+		@media screen and (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 400px 400px;
+			justify-content: center;
+			align-items: center;
+			grid-column-gap: 20px;
+		}
 
+		@media screen and (min-width: 1200px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+		}
 
 		.container-card-product {
 			width: 300px;
 			height: 300px;
 			margin-bottom: 150px;
 			position: relative;
+
+			@media screen and (min-width: 768px) {
+				justify-self: center;
+				align-self: center;
+			}
 
 			.content-card-image {
 				display: flex;

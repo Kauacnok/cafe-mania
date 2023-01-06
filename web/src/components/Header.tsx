@@ -1,5 +1,6 @@
 import logo from '../assets/specialty3.png'
 import { NavbarMenuSmallDevices } from './NavbarMenuSmallDevices'
+import { NavbarMenuLargeDevices } from './NavbarMenuLargeDevices'
 
 export function Header() {
 	return (
@@ -10,6 +11,7 @@ export function Header() {
 					<h1>Café Mania</h1>
 				</div>
 				<NavbarMenuSmallDevices />
+				<NavbarMenuLargeDevices />
 			</header>
 			<section className="headerContainer">
 				<article className="headerContent">
