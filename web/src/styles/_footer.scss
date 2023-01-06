@@ -1,0 +1,57 @@
+footer {
+	background-color: $black-900;
+	h1 {
+		color: white;
+		padding-top: 10px;
+		padding-left: 40px;
+		margin-bottom: 15px;
+		font-family: $itim_font;
+	}
+
+	.footer-container {
+		display: flex;
+		flex-direction: column;
+
+		.footer-content {
+			display: flex;
+			flex-direction: column;
+			h3 {
+				color: white;
+				font-size: 2.0rem;
+				margin-top: 25px;
+				padding-left: 40px;
+				margin-top: 25px;
+				margin-bottom: 25px;
+			}
+			p {
+				color: $white-100;
+				margin-bottom: 5px;
+				text-align: left;
+				padding-left: 40px;
+			}
+		}
+	}
+
+	.scrollGoUp {
+		position: fixed;
+		right: 2rem;
+		bottom: 2rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		background-color: white;
+		border: 1 solid white;
+		border-bottom: 2px solid $black-700;
+		border-radius: 100%;
+		transition-duration: 0.5s;
+
+		&:hover {
+			height: 38px;
+			border-bottom: none;
+			border: 1 solid white;
+		}
+	}
+}

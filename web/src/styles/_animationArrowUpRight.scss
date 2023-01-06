@@ -1,0 +1,12 @@
+@keyframes bounceAnimation {
+	from {
+		transform: translate(-50%, 130%)
+	}
+	to {
+		transform: translate(-50%, 140%)
+	}
+}
+
+.scrollDown {
+	animation: bounceAnimation 1000ms linear infinite;
+}

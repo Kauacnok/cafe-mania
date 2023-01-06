@@ -1,0 +1,109 @@
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $white-50;
+	width: 100%;
+	padding: 20px;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.418);
+	position: fixed;
+	top: 0px;
+	z-index: 50;
+	div {
+		display: flex;
+		align-items: center;
+
+		h1 {
+			font-family: $itim_font;
+		}
+
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.IconButton {
+		background-color: transparent;
+		border: none;
+	}
+
+}
+
+.headerContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 80px;
+
+	.headerContent {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-image: linear-gradient(to bottom, $black-700, $black-900);
+		height: 60vh;
+
+		h1 {
+			font-size: 2.4rem;
+			text-align: center;
+			color: white;
+			padding-bottom: 30px;
+			width: 80%;
+
+			border-bottom: 2px solid black;
+
+			span {
+				font-size: 3.4rem;
+				color: $yellow-400;
+			}
+
+			@media screen and (max-width: 320px) {
+				font-size: 1.6rem;
+				padding-top: 30px;
+			}
+		}
+
+		.subtitle {
+			width: 80%;
+			color: white;
+			margin-top: 20px;
+			span {
+				font-size: 2.8rem;
+				color: $yellow-400;
+			}
+		}
+
+		.description {
+			width: 80%;
+			color: $white-300;
+			margin-top: 20px;
+			padding-bottom: 35px;
+
+			@media screen and (max-width: 320px) {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.headerImage {
+		background-image: url('../assets/home.png');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 60vh;
+	}
+
+	.scrollDown {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 130%);
+		background-image: url('../assets/scroll.png');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}

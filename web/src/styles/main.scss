@@ -1,0 +1,40 @@
+$white-50: #F9FAFB;
+$white-100: #F3F4F6;
+$white-300: #D1D5DB;
+
+$black-700: #374151;
+$black-900: #161616;
+
+$yellow-400: #FDE047;
+$yellow-500: #F59E0B;
+
+$green-400: #34D399;
+$green-500: #10B981;
+
+$red-100: #FEE2E2;
+$red-500: #EF4444;
+
+$roboto_font: 'Roboto', sans-serif;
+$itim_font: 'Itim', cursive; 
+
+@import "_header";
+@import "_menuSmallDevices";
+@import "_animationScroll";
+@import "_products";
+@import "_blogs";
+@import "_footer";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: $roboto_font;
+	font-weight: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $white-100;
+}

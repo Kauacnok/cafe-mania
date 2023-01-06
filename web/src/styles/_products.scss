@@ -1,0 +1,206 @@
+main {
+	height: 100vh;
+	margin-top: 100px;
+
+	h2 {
+		width: 80%;
+		font-size: 2.4rem;
+		margin: auto;
+		text-align: center;
+		padding-left: 10px;
+		border-left: 2px solid $yellow-500;
+
+		@media screen and (max-width: 320px) {
+			font-size: 1.6rem;
+		}
+	}
+
+	p {
+		margin-top: 20px;
+		margin-bottom: 80px;
+		text-align: center;
+		color: $black-700;
+	}
+
+	.button-about {
+		background-color: $black-900;
+		color: white;
+		height: 25px;
+		padding: 0px 5px;
+		margin-left: 5px;
+		font-weight: bold;
+		border: none;
+		border-bottom: 4px solid $black-900;
+		border-radius:10px;
+		cursor: pointer;
+	}
+
+	.container-card-products {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+
+
+		.container-card-product {
+			width: 300px;
+			height: 300px;
+			margin-bottom: 150px;
+			position: relative;
+
+			.content-card-image {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 70%;
+				background-color: $white-300;
+				border: 2px solid $white-300;
+				border-radius: 5px;
+
+				img {
+					width: 120px;
+					height: 120px;
+				}
+			}
+		}
+
+		.content-card {
+			height: 30%;
+			background-color: $white-50;
+			border: 2px solid $white-50;
+
+			.price {
+				width: 40%;
+				padding-top: 10px;
+				margin-left: 10px;
+			}
+
+			.title {
+				width: 40%;
+				text-align: left;
+				margin-left: 10px;
+				margin-bottom: 20px;
+			}
+
+		}
+
+		.button-buy {
+			position: absolute;
+			right: 1rem;
+			bottom: 1.2rem;
+			height: 30px;
+			padding: 0px 5px;
+			background-color: $green-400;
+			color: white;
+			font-weight: bold;
+			border: none;
+			border-bottom: 4px solid $green-500;
+			border-radius:10px;
+			cursor: pointer;
+			transition-duration: 1s;
+
+			&:hover {
+				height: 28px;
+				border-bottom: 4px solid $green-400;
+			}
+		}
+
+		.lock-container {
+			position: absolute;
+			right: 1rem;
+			bottom: 4rem;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 40px;
+			height: 40px;
+			background-color: $black-900;
+			text-align: center;
+
+			border: 2px solid $black-900;
+			border-radius: 100%;
+		}
+	}
+
+	aside {
+		height: 100vh;
+
+		p {
+			margin-bottom: 100px;
+		}
+	}
+}
+
+.AlertDialogOverlay {
+	background-color: $black-700;
+	position: fixed;
+	inset: 0;
+	animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+	opacity: 0.5;
+}
+
+.AlertDialogContent {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90vw;
+	max-width: 500px;
+	max-height: 85vh;
+	padding: 25px;
+	animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.AlertDialogContent:focus {
+	outline: none;
+}
+
+.AlertDialogTitle {
+	margin: 0;
+	color: black;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.AlertDialogDescription {
+	margin-bottom: 20px;
+	color: black;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.button-close {
+	background-color: $red-100;
+	width: 100px;
+	height: 30px;
+	border: 2px solid $red-100;
+	border-radius: 10px;
+	color: $red-500;
+	cursor: pointer;
+}
+
+@keyframes overlayShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.5;
+	}
+}
+
+@keyframes contentShow {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -48%) scale(0.96);
+	}
+	to {
+		opacity: 0.5;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
