@@ -21,7 +21,7 @@ export function Footer() {
 					<p>Das 13h as 19h</p>
 				</div>
 			</div>
-			<a href="#" className="scrollGoUp">
+			<a href="#" className="scrollGoUp" aria-label="Go up to the page">
 				<ArrowUp size={30} color="black" />
 			</a>
 		</footer>

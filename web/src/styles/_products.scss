@@ -110,18 +110,18 @@ main {
 			bottom: 1.2rem;
 			height: 30px;
 			padding: 0px 5px;
-			background-color: $green-400;
+			background-color: $green-700;
 			color: white;
 			font-weight: bold;
 			border: none;
-			border-bottom: 4px solid $green-500;
+			border-bottom: 4px solid $green-800;
 			border-radius:10px;
 			cursor: pointer;
 			transition-duration: 1s;
 
 			&:hover {
 				height: 28px;
-				border-bottom: 4px solid $green-400;
+				border-bottom: 4px solid $green-700;
 			}
 		}
 
