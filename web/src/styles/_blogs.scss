@@ -16,10 +16,20 @@
 		position: relative;
 
 		.blog-image {
-			height: 300px;
-			width: 300px;
+			height: 144px;
+			width: 256px;
 			border: 4px solid transparent;
 			border-radius: 10px;
+
+			@media screen and (min-width: 768px) {
+				height: 160px;
+				width: 320px;
+			}
+
+			@media screen and (min-width: 1200px) {
+				height: 213px;
+				width: 426px;
+			}
 		}
 
 		.blog-description {
