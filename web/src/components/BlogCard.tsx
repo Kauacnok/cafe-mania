@@ -20,7 +20,7 @@ export function BlogCard({ title, description, imageIndex }: BlogCardProps) {
 			<div className="content-blogs">
 				<img src={blogImages[imageIndex]} alt={altImages[imageIndex]} className="blog-image" />
 				<div className="blog-description">
-					<h4>{title}</h4>
+					<h3>{title}</h3>
 					<p>{description}</p>
 					<AlertUserComponent title="Visitar página" classNameStyleButton="button-visit" />
 				</div>
