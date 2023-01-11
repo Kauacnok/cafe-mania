@@ -3,7 +3,7 @@ import { ArrowUp } from 'phosphor-react'
 export function Footer() {
 	return (
 		<footer>
-			<h1>Café mania</h1>
+			<h2>Café mania</h2>
 			<div className="footer-container">
 				<div className="footer-content">
 					<h3>Endereço:</h3>
