@@ -1,6 +1,10 @@
 <p align='center'> 
 	<h1 align='center'>Café Mania</h1>
 </p>
+<p align='center'> 
+	<img src="https://i.imgur.com/68ySYM2.png" alt="Imagem com o layout do site na versão para pc, tablet ou celular">
+</p>
+
 
 ## 🧪 Tecnologias
 
