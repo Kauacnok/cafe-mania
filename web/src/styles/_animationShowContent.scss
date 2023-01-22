@@ -1,0 +1,14 @@
+@keyframes ContentAnimation {
+	0% {
+		transform: translate(0, -10);
+		opacity: 0
+	}
+	50% {
+		transform: translate(0, -5);
+		opacity: 0.5
+	}
+	100% {
+		transform: translate(0, -5);
+		opacity: 1
+	}
+}

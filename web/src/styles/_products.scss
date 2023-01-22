@@ -41,6 +41,7 @@ main {
 		align-items: center;
 		flex-direction: column;
 		position: relative;
+		animation: ContentAnimation 3000ms linear;
 		
 		@media screen and (min-width: 768px) {
 			display: grid;
@@ -81,6 +82,12 @@ main {
 				img {
 					width: 120px;
 					height: 120px;
+
+
+					&:hover {
+						animation: moveUp 1500ms linear;
+						cursor: pointer
+					}
 				}
 			}
 		}
