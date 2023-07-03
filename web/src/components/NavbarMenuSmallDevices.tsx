@@ -1,7 +1,20 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { List, X } from 'phosphor-react'
 
-export function NavbarMenuSmallDevices() {
+interface NavbarMenuSmallDevicesProps {
+	homeTopPageRef: any,
+	mainPageRef: any,
+	blogPageRef: any
+}
+
+export function NavbarMenuSmallDevices({ homeTopPageRef, mainPageRef, blogPageRef }: NavbarMenuSmallDevicesProps) {
+
+	function scrollThePageTo(refContent: any) {
+		if (refContent.current) {
+			refContent.current.scrollIntoView({ behavior: 'smooth' })
+		}
+	}
+
 	return (
 		<>
 			<DropdownMenu.Root>
@@ -13,21 +26,21 @@ export function NavbarMenuSmallDevices() {
 
 				<DropdownMenu.Portal>
 					<DropdownMenu.Content className="DropdownMenuContent" sideOffset={5}>
-						<a href="#" className="DropdownMenuItemTagA">
+						<span onClick={() => {scrollThePageTo(homeTopPageRef)}} className="DropdownMenuItemTagA">
 							<DropdownMenu.Item className="DropdownMenuItem">
 								Inicio
 							</DropdownMenu.Item>
-						</a>
-						<a href="#products" className="DropdownMenuItemTagA">
+						</span>
+						<span onClick={() => {scrollThePageTo(mainPageRef)}} className="DropdownMenuItemTagA">
 							<DropdownMenu.Item className="DropdownMenuItem">
 								Produtos
 							</DropdownMenu.Item>
-						</a>
-						<a href="#blog" className="DropdownMenuItemTagA">
+						</span>
+						<span onClick={() => {scrollThePageTo(blogPageRef)}} className="DropdownMenuItemTagA">
 							<DropdownMenu.Item className="DropdownMenuItem">
 								Blog
 							</DropdownMenu.Item>
-						</a>
+						</span>
 						<span className="iconX">
 							<DropdownMenu.Item className="DropdownMenuItem">
 									<X size={40} className="" />

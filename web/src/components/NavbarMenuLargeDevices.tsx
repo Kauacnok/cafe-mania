@@ -1,30 +1,43 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 
-export function NavbarMenuLargeDevices() {
+interface NavbarMenuLargeDevicesProps {
+	homeTopPageRef: any,
+	mainPageRef: any,
+	blogPageRef: any
+}
+
+export function NavbarMenuLargeDevices({ homeTopPageRef, mainPageRef, blogPageRef }: NavbarMenuLargeDevicesProps) {
+
+	function scrollThePageTo(refContent: any) {
+		if (refContent.current) {
+			refContent.current.scrollIntoView({ behavior: 'smooth' })
+		}
+	}
+
 	return (
 		<>
 			<NavigationMenu.Root>
 				<NavigationMenu.List className="NavigationMenuList">
 					<NavigationMenu.Item>
-						<a href="#" className="NavigationMenuTriggerTagA">
+						<span onClick={() => {scrollThePageTo(homeTopPageRef)}}>
 							<NavigationMenu.Trigger className="NavigationMenuTrigger">
 								Inicio
 							</NavigationMenu.Trigger>
-						</a>
+						</span>
 					</NavigationMenu.Item>
 					<NavigationMenu.Item>
-						<a href="#products" className="NavigationMenuTriggerTagA">
+						<span onClick={() => {scrollThePageTo(mainPageRef)}}>
 							<NavigationMenu.Trigger className="NavigationMenuTrigger">
 								Produtos
 							</NavigationMenu.Trigger>
-						</a>
+						</span>
 					</NavigationMenu.Item>
 					<NavigationMenu.Item>
-						<a href="#blog" className="NavigationMenuTriggerTagA">
+						<span onClick={() => {scrollThePageTo(blogPageRef)}}>
 							<NavigationMenu.Trigger className="NavigationMenuTrigger">
 								Blog
 							</NavigationMenu.Trigger>
-						</a>
+						</span>
 					</NavigationMenu.Item>
 				</NavigationMenu.List>
 			</NavigationMenu.Root>

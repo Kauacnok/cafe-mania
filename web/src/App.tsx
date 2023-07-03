@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 import './styles/main.scss'
 import { Header } from './components/Header'
 import { CoffeeCard } from './components/CoffeeCard'
@@ -6,10 +8,13 @@ import { AlertUserComponent } from './components/AlertUserComponent'
 import { Footer } from './components/Footer'
 
 export function App() {
+    const mainPageRef = useRef(null)
+    const blogPageRef = useRef(null)
+
     return (
     	<>
-    		<Header />
-    		<main>
+    		<Header mainPageRef={mainPageRef} blogPageRef={blogPageRef} />
+    		<main ref={mainPageRef}>
     			<h2>Conheça alguns de nossos produtos</h2>
     			<p>Selecionamos os nossos melhores café para você avaliar</p>
 
@@ -28,7 +33,7 @@ export function App() {
     				<CoffeeCard title="Café Moka" price="9" indexImage={3} />
     			</article>
 
-				<aside id="blog">
+				<aside ref={blogPageRef} id="blog">
 	    			<h2>Conheça nosso blog de notícias sobre o café</h2>
 	    			<p>Leia enquanto toma seu café</p>
 	    			<div className="container-blogs">
