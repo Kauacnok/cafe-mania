@@ -39,15 +39,28 @@
 			h3 {
 				font-size: 2.0rem;
 				text-align: center;
+				padding: 0px 20px;
 
 				@media screen and (max-width: 320px) {
 					font-size: 1.4rem;
+					padding: 0px 20px;
+				}
+
+				@media screen and (min-width: 768px) {
+					padding: 0px 0px;
 				}
 			}
 
 			p {
+				width: 90%;
 				margin-bottom: 20px;
+				justify-self: center;
+				align-self: center;
+				text-indent: 24px;
+				text-align: left;
+				padding: 0px 5px;
 				@media screen and (min-width: 768px) {
+					width: 60%;
 					font-size: 0.8rem;
 				}
 				@media screen and (min-width: 1200px) {

@@ -1,5 +1,6 @@
-import { AlertUserComponent } from './AlertUserComponent'
+import Balancer from 'react-wrap-balancer'
 
+import { AlertUserComponent } from './AlertUserComponent'
 import blog1 from '../assets/blog1.png'
 import blog2 from '../assets/blog2.png'
 
@@ -20,7 +21,7 @@ export function BlogCard({ title, description, imageIndex }: BlogCardProps) {
 			<div className="content-blogs">
 				<img src={blogImages[imageIndex]} alt={altImages[imageIndex]} className="blog-image" />
 				<div className="blog-description">
-					<h3>{title}</h3>
+					<h3><Balancer>{title}</Balancer></h3>
 					<p>{description}</p>
 					<AlertUserComponent title="Visitar página" classNameStyleButton="button-visit" />
 				</div>
