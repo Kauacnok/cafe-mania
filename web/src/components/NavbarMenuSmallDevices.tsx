@@ -10,9 +10,11 @@ interface NavbarMenuSmallDevicesProps {
 export function NavbarMenuSmallDevices({ homeTopPageRef, mainPageRef, blogPageRef }: NavbarMenuSmallDevicesProps) {
 
 	function scrollThePageTo(refContent: any) {
-		if (refContent.current) {
-			refContent.current.scrollIntoView({ behavior: 'smooth' })
-		}
+		setTimeout(() => {
+			if (refContent.current) {
+				refContent.current.scrollIntoView({ behavior: 'smooth' })
+			}
+		}, 1500);
 	}
 
 	return (
