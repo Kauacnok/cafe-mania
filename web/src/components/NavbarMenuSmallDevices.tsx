@@ -14,7 +14,7 @@ export function NavbarMenuSmallDevices({ homeTopPageRef, mainPageRef, blogPageRe
 			if (refContent.current) {
 				refContent.current.scrollIntoView({ behavior: 'smooth' })
 			}
-		}, 1500);
+		}, 500);
 	}
 
 	return (
